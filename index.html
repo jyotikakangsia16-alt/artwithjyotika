@@ -1,10 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Art with Jyotika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:#f8f5f0;
+color:#222;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:#f8f5f0;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:4rem;
+margin:0;
+}
+
+.hero-text{
+font-size:1.2rem;
+max-width:700px;
+margin-top:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 24px;
+margin-top:25px;
+background:#222;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+section{
+padding:70px 10%;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:2.5rem;
+margin-bottom:30px;
+text-align:center;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.course{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+</style>
 </head>
+
 <body>
+
+<header>
 <h1>Art with Jyotika</h1>
-<p>Official Portfolio & Art Academy Website</p>
+
+<p class="hero-text">
+Acrylic Artist • Portrait Artist • Art Instructor
+</p>
+
+<a class="btn" href="#courses">Explore Courses</a>
+</header>
+
+<section>
+<h2 class="section-title">About Jyotika</h2>
+
+<p>
+Jyotika Kangsia is a passionate acrylic artist and art educator dedicated to helping aspiring artists discover their creativity through structured learning and artistic expression.
+</p>
+</section>
+
+<section>
+<h2 class="section-title">Featured Artwork</h2>
+
+<div class="gallery">
+
+<img src="images/IMG_1113.PNG">
+<img src="images/IMG_1102.PNG">
+<img src="images/IMG_1104.PNG">
+<img src="images/IMG_1106.PNG">
+<img src="images/IMG_0949.PNG">
+<img src="images/IMG_20210602_231414_410.jpg">
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<h2 class="section-title">Courses</h2>
+
+<div class="course-grid">
+
+<div class="course">
+<h3>Basic Drawing</h3>
+<p>15 Days</p>
+<h2>₹1,500</h2>
+</div>
+
+<div class="course">
+<h3>Basic Drawing</h3>
+<p>30 Days</p>
+<h2>₹2,000</h2>
+</div>
+
+<div class="course">
+<h3>Charcoal Art</h3>
+<p>1 Month</p>
+<h2>₹2,500</h2>
+</div>
+
+<div class="course">
+<h3>Acrylic Painting</h3>
+<p>1 Month</p>
+<h2>₹3,000</h2>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Contact</h2>
+
+<p style="text-align:center;">
+📞 7996587999<br>
+📧 jyotikakangsia16@gmail.com
+</p>
+
+</section>
+
+<footer>
+© 2026 Art with Jyotika
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917996587999">
+WhatsApp
+</a>
+
 </body>
 </html>
