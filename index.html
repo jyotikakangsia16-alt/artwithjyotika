@@ -228,10 +228,11 @@ text-align:center;
 
 .main-art-image{
 width:100%;
-height:600px;
+max-height:500px;
+height:auto;
 object-fit:contain;
-background:white;
 border-radius:15px;
+background:white;
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
@@ -396,9 +397,32 @@ font-size:2rem;
 .gallery img{
 height:auto;
 }
-    
+
+/* Featured Artwork Mobile Fix */
+.main-art-image{
+max-height:350px;
+height:auto;
+}
+
+.gallery-arrow{
+width:45px;
+height:45px;
+font-size:24px;
+}
+
+.art-thumbnails img{
+width:70px;
+height:70px;
+}
+
+.gallery-wrapper{
+width:100%;
+overflow:hidden;
+}
+
 }
 </style>
+    
 </head>
 
 <body>
