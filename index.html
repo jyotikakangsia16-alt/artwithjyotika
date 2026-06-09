@@ -256,7 +256,29 @@ transition:0.3s;
 opacity:1;
 transform:scale(1.08);
 }
-    
+.gallery-wrapper{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+}
+
+.gallery-arrow{
+background:#fff;
+border:none;
+font-size:40px;
+width:60px;
+height:60px;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.gallery-arrow:hover{
+transform:scale(1.1);
+}
+
 .menu-btn{
 display:none;
 }
@@ -473,9 +495,17 @@ A curated collection of sketches, charcoal portraits, acrylic paintings, spiritu
     
 <div class="art-gallery">
 
+<div class="gallery-wrapper">
+
+<button class="gallery-arrow" onclick="prevArtwork()">❮</button>
+
 <img id="mainArtwork"
 src="images/IMG_1113.PNG"
 class="main-art-image">
+
+<button class="gallery-arrow" onclick="nextArtwork()">❯</button>
+
+</div>
 
 <div class="art-thumbnails">
 
@@ -795,8 +825,34 @@ function toggleMenu() {
   }
 }
 
+const artworks = [
+"images/IMG_1113.PNG",
+"images/IMG_1102.PNG",
+"images/IMG_1104.PNG",
+"images/IMG_1106.PNG",
+"images/IMG_0949.PNG",
+"images/IMG_1107.PNG",
+"images/IMG_20210602_231414_410.jpg",
+"images/IMG_20210725_172443.jpg",
+"images/IMG_20210915_162011.jpg",
+"images/IMG_20210917_193223.jpg"
+];
+
+let currentArtwork = 0;
+
 function changeArtwork(image){
   document.getElementById("mainArtwork").src = image;
+  currentArtwork = artworks.indexOf(image);
+}
+
+function nextArtwork(){
+  currentArtwork = (currentArtwork + 1) % artworks.length;
+  document.getElementById("mainArtwork").src = artworks[currentArtwork];
+}
+
+function prevArtwork(){
+  currentArtwork = (currentArtwork - 1 + artworks.length) % artworks.length;
+  document.getElementById("mainArtwork").src = artworks[currentArtwork];
 }
 
 </script>
