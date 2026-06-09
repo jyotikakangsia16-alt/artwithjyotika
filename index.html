@@ -790,6 +790,7 @@ Start Chat
 </a>
 
 <script>
+
 function toggleMenu() {
   const nav = document.getElementById("mobileNav");
 
@@ -799,6 +800,11 @@ function toggleMenu() {
     nav.style.display = "none";
   }
 }
+
+function changeArtwork(image){
+  document.getElementById("mainArtwork").src = image;
+}
+
 </script>
 </body>
 </html>
