@@ -248,13 +248,14 @@ padding:10px;
 }
 
 /* Menu */
-nav{
-display:flex;
-flex-wrap:wrap;
+#mobileNav{
+display:none;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:12px;
 padding:15px 5px !important;
+background:#111;
 }
 
 nav a{
@@ -313,7 +314,7 @@ height:auto;
 
 <body>
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
-<nav id="mobileNav" style="background:#0f0f0f;;padding:18px;text-align:center;position:sticky;top:0;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,0.15);">
+<nav id="mobileNav" style="display:none;background:#0f0f0f;padding:18px;text-align:center;position:sticky;top:0;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,0.15);">
 <a href="#about" style="color:white;margin:20px;text-decoration:none;">About</a>
 
 <a href="#artwork" style="color:white;margin:20px;text-decoration:none;">Featured Artwork</a>
@@ -707,15 +708,15 @@ Start Chat
 <a class="whatsapp" href="https://wa.me/917996587999" target="_blank">
 💬 WhatsApp
 </a>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <script>
 function toggleMenu() {
-  var nav = document.getElementById("mobileNav");
-  if (nav.style.display === "flex") {
-    nav.style.display = "none";
-  } else {
+  const nav = document.getElementById("mobileNav");
+
+  if (window.getComputedStyle(nav).display === "none") {
     nav.style.display = "flex";
+  } else {
+    nav.style.display = "none";
   }
 }
 </script>
