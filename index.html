@@ -184,7 +184,11 @@ header p{
 animation:fadeInUp 1.5s ease;
 }
 /* MOBILE RESPONSIVE FIX */
-
+header .btn{
+display:block;
+margin:15px auto !important;
+max-width:250px;
+}
 *{
 box-sizing:border-box;
 }
@@ -198,7 +202,23 @@ video{
 max-width:100%;
 height:auto;
 }
-
+.hero-stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+font-size:18px;
+font-weight:500;
+margin-top:30px;
+}
+.contact-card{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
 @media (max-width:768px){
 
 /* Menu */
@@ -206,13 +226,14 @@ nav{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
-padding:15px 10px !important;
+align-items:center;
+gap:12px;
+padding:15px 5px !important;
 }
 
 nav a{
-margin:0 !important;
-font-size:18px;
+margin:0 8px !important;
+font-size:16px;
 }
 
 /* Hero Section */
@@ -246,7 +267,20 @@ right:10px;
 padding:12px 18px;
 font-size:16px;
 }
+.gallery{
+grid-template-columns:1fr;
+}
 
+section{
+padding:30px 20px;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.gallery img{
+height:auto;
 }
 </style>
 </head>
@@ -269,15 +303,7 @@ font-size:16px;
 <header>
 <h1>Art with Jyotika</h1>
 
-<div style="
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-font-size:18px;
-font-weight:500;
-">
+<div class="hero-stats">
 
 <span>🎨 8+ Years Experience</span>
 
@@ -616,14 +642,7 @@ target="_blank">
     
 <h2 class="section-title">Get In Touch</h2>
 
-<div style="
-max-width:700px;
-margin:auto;
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-">
+<div class="contact-card">
 
 <p>📞 <strong>Phone:</strong> +91 7996587999</p>
 
