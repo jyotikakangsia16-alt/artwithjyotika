@@ -288,7 +288,7 @@ display:none;
 @media (max-width:768px){
 .menu-btn{
 display:block;
-position:fixed;
+position:absolute;
 top:15px;
 right:15px;
 z-index:10000;
@@ -416,8 +416,33 @@ height:70px;
 }
 
 .gallery-wrapper{
+position:relative;
 width:100%;
-overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.gallery-arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+z-index:999;
+background:white;
+width:40px;
+height:40px;
+border-radius:50%;
+font-size:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.gallery-arrow:first-child{
+left:5px;
+}
+
+.gallery-arrow:last-child{
+right:5px;
 }
 
 }
